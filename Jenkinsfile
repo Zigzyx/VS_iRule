@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        BIGIP_HOST = '192.168.1.50'
+        BIGIP_HOST = '10.1.0.145'
         BIGIP_CREDS = credentials('bigip-admin-credentials')
     }
 
