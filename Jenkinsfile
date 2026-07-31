@@ -16,7 +16,7 @@ pipeline {
         stage('Static & Logic Conflict Check') {
             steps {
                 sh '''
-                    python3 -m pip install pyyaml --quiet
+                    python3 -m pip install pyyaml --quiet --break-system-packages
                     python3 scripts/irule_checker.py
                 '''
             }
