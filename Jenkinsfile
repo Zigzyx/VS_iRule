@@ -29,7 +29,7 @@ pipeline {
                     sh '''
                         for rule in irules/*.tcl; do
                             RULENAME=$(basename "$rule" .tcl)
-                            RULE_CONTENT=$(python3 -c "import json, sys; print(json.dumps(open(sys.argv[1]).read()))" "$rule")
+                            RULE_CONTENT=$(jq -sR . "$rule")
                             
                             echo "Validating $RULENAME against BIG-IP..."
                             
