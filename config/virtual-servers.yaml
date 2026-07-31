@@ -1,0 +1,6 @@
+virtual_servers:
+  - name: "vs_app_https"
+    irules:
+      - "api_pool.tcl",
+      - "api_pool_v2.tcl",
+      - "deny-health-endpoint.tcl"
