@@ -10,7 +10,7 @@ when HTTP_REQUEST {
       HTTP::uri "/api/v2/purchases/validations/recurrents/enquiry"
     }
 
-    switch -glob $uri_info {
+    switch -glob $uri_info {]}
         "/kimonotm*" {
           if { ($proto equals "http") } {
             HTTP::redirect https://[getfield [HTTP::host] ":" 1][HTTP::uri]
